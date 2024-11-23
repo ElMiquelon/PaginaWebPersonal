@@ -1,0 +1,145 @@
+.upload-container{
+    margin: 100px auto;
+    width: 500px;
+    text-align: center;
+    background-color: var(--color1);
+    border-radius: 5px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    color: var(--color2);
+}
+
+.upload-container > .title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.upload-container .drag-drop{
+    border: dashed 3px var(--color4);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 60px 30px;
+    margin: 20px 0;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color: var(--color3);
+    
+}
+
+.upload-container .drag-drop .icon svg{
+    width: 100px;
+    height: 100px;
+    color: var(--color2);
+}
+
+.upload-container .drag-drop .btn{
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--color2);
+    color: var(--color4);
+    border: none;
+    border-radius: 5px;
+    min-width: 200px;
+    cursor:pointer;
+}
+
+.upload-container .drag-drop .btn:hover{
+    background-color: var(--color3);
+}
+
+.upload-container .uploaded-files{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upload-container .title-section{
+    text-align: left;
+    color: var(--color3);
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.upload-container .uploaded-files .file{
+    border: solid 1px var(--color4);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+    padding: 10px;
+    gap: 10px;
+}
+
+.upload-container .uploaded-files .file:hover{
+    box-shadow: 0 2px 10px var(--color3);
+}
+
+.upload-container .uploaded-files .file .icon{
+    width: 48px;
+    height: 48px;
+}
+
+.upload-container .uploaded-files .file .title{
+    flex: 1;
+}
+
+.upload-container .uploaded-files .file .title .name{
+    display: block;
+    padding-bottom: 5px;
+}
+
+.upload-container .uploaded-files .file .title .size{
+    color: var(--color4);
+    font-size: 14px;
+}
+
+.upload-container .uploaded-files .file .title .progress{
+    height: 5px;
+    width: 100%;
+    background-color: var(--color2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.upload-container .uploaded-files .file .title .progress .progress-60{
+    background-color: #00aaff;
+    height: 5px;
+    width: 60%;
+    border-radius: 4px;
+}
+
+.upload-container .uploaded-files .file .actions button{
+    margin: 10px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-container .uploaded-files .file .actions button:hover{
+    background-color: crimson;
+}
+
+.upload-container .uploaded-files .file .actions button svg{
+    width: 20px;
+    height: 20px;
+    fill: var(--color1);
+}
+
+
+
+
+
+
+
+

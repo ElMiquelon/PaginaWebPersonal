@@ -1,0 +1,297 @@
+:root{
+    --color1: #333;
+    --color1T: #333333aa;
+    --color2: #fff;
+    --color3: #e1f4f3;
+    --color4: #706c61;
+    --color4T: #706c61aa;
+    --tamanioBarra: 15vh;
+}
+
+html{
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: auto;
+}
+
+/** Scroll Snap**/
+nav,
+.contenedorLenguajes,
+.contacto {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    height: var(--tamanioBarra);
+    max-height: var(--tamanioBarra);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color1);
+}
+
+nav .contenedorImg{
+    height: 100%;
+}
+
+nav .contenedorImg img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+nav .presentacion{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    color: var(--color2);
+}
+
+nav .presentacion p{
+    margin: 0;    
+}
+
+nav .presentacion .nombre{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+nav .presentacion .profesion{
+    font-weight: light;
+}
+
+nav .navegacion{
+    height: 100%;
+}
+
+nav .navegacion svg{
+    height: 100%;
+    cursor: pointer;
+    fill: var(--color2);
+}
+
+nav .navegacion .navegacionOculta{
+    position: absolute;
+    top: calc(var(--tamanioBarra) * -1);
+    left: 0;
+    width: 100%;
+    height: var(--tamanioBarra);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    transition: top .3s ease-in-out;
+}
+
+nav .navegacion svg:hover ~ .navegacionOculta{
+    top: 0;
+}
+
+nav .navegacion .navegacionOculta:hover{
+    top: 0;
+}
+
+nav .navegacion .navegacionOculta > a{
+    flex: auto;
+    align-content: center;
+}
+
+nav .navegacion .navegacionOculta a{
+    font-size: x-large;
+    height: 100%;
+    color: var(--color1); 
+    background-color: var(--color2); 
+}
+
+nav .navegacion .navegacionOculta a:hover{
+    color: var(--color3); 
+    background-color: var(--color4); 
+}
+
+/* Hasta aqui la barra de navegacion */
+
+.proyectos{
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.proyectos .capaOscura{
+    background-color: var(--color4T);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.proyectos .capaOscura h1{
+    width: 100%;
+    text-align: center;
+    color: var(--color3);
+}
+
+
+.proyectos .capaOscura .proyectoDestacado{
+    width: 20vw;
+    padding: 2.5vh 0;
+    margin-bottom: 5vh;
+}
+
+.proyectos .capaOscura .proyectoDestacado .contenedorProyecto{
+    width: 20vw;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    text-align: center;
+    color: var(--color3);
+}
+
+.proyectos .capaOscura .contenedorProyecto .contenedorIcono{
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+}
+
+.proyectos .capaOscura .contenedorProyecto .contenedorIcono img{
+    height: 100%;
+}
+
+.proyectos .capaOscura .contenedorProyecto .informacion{
+    margin: 0 1vw;
+}
+
+.proyectos .capaOscura .contenedorProyecto .descripcion{
+    text-align: justify;
+}
+
+.proyectos .capaOscura .proyectoDestacado:hover{
+    background-color: var(--color4);
+}
+
+.contenedorLenguajes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.contenedorLenguajes h1{
+    width: 100%;
+}
+
+.contenedorLenguajes .lenguaje{
+    width: 20vw;
+    padding: 2.5vw 0;
+}
+
+.contenedorLenguajes .iconoLenguaje{
+    width: 100%;
+}
+
+.contenedorLenguajes .iconoLenguaje img{
+    width: 100%;
+}
+
+.contacto{
+    width: 75vw;
+    height: 80vh;
+    margin: 0 auto 5vh;
+}
+
+.contacto form {
+    height: 100%;
+}
+.contacto form fieldset{
+    border: 0;
+    background-color: var(--color4);
+    height: 100%;
+    text-align: center;
+    color: var(--color2);
+    padding: 0;
+    display: block;
+}
+
+.contacto form fieldset .camposFormulario{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 5%;
+    width: 90%;
+    text-align: left;
+}
+
+
+
+.contacto form fieldset .camposFormulario input{
+    margin-bottom: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--color2);
+    width: 100%;
+    outline: none;
+    transition: background-color .3s ease-in-out;
+}
+
+.contacto form fieldset .camposFormulario label{
+    width: 100%;
+}
+
+.contacto form fieldset .camposFormulario input:focus{
+    background-color: var(--color1);
+}
+
+.contacto form fieldset .camposFormulario .inputChico{
+    height: 5vh;
+    font-size: 3vh;
+    color: var(--color3);
+}
+
+.contacto form fieldset .camposFormulario #mensaje{
+    margin-bottom: 5px;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    transition: background-color .3s ease-in-out;
+    margin-bottom: 20px;
+
+    height: 40vh;
+    font-size: 2vh;
+    text-align: left;
+    color: var(--color3);
+    border: 1px solid var(--color2);
+    border-radius: 15px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.contacto form fieldset .camposFormulario #mensaje:focus{
+    background-color: var(--color1);
+}
+
+.contacto form fieldset .camposFormulario button{
+    width: 30%;
+    height: fit-content;
+    margin: auto;
+    background-color: var(--color1);
+    border: none;
+    color: var(--color2);
+    cursor: pointer;
+}
+
+.contacto form fieldset .camposFormulario button:hover{
+    background-color: var(--color1T);
+    color: var(--color3);
+}
+
+.contacto form fieldset .camposFormulario button:active{
+    background-color: var(--color2);
+    color: var(--color1);
+}

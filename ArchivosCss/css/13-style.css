@@ -1,0 +1,67 @@
+
+.barraVertical{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 52px;
+    background-color: var(--color1);
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+    left: 0;
+    top: 0;
+}
+
+.barraVertical:hover{
+    width: 25vw;
+}
+
+.barraVertical .bar{
+    background-color: var(--color4);
+    color: var(--color2);
+    display: flex;
+    justify-content: center;
+}
+
+.barraVertical .user{
+    color: var(--color2);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    height: 180px;
+    transform: translateX(300px);
+    opacity: 0;
+    width: 25vw;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.barraVertical .user img{
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.barraVertical:hover .user{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.barraVertical .links a{
+    color: var(--color2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 25vw;
+    overflow: hidden;
+}
+
+.barraVertical .links a .icon{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barraVertical .links a:hover{
+    background-color: var(--color3);
+    color: var(--color4);
+}

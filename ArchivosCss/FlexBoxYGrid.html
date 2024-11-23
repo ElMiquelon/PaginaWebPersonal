@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox/grid</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+</head>
+<body>
+    <nav>
+        <div class="contenedorImg">
+            <img src="./img/pic.jpg" alt="fotoYo">
+        </div>
+        <div class="presentacion">
+            <p class="nombre">Miguel Angel Rojas Helguera</p>
+            <p class="profesion">Estudiante ICOM</p>
+        </div>
+        <div class="navegacion">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M125-244v-57.5h710v57.5H125Zm0-207.5V-509h710v57.5H125Zm0-207.5v-57.5h710v57.5H125Z"/></svg>
+            <div class="navegacionOculta">
+                <a href="../index.html">Inicio</a>
+                <a href="../ArchivosEncabezado/AcercaDe.html">Acerca de Mí</a>
+                <a href="../ArchivosEncabezado/Clientes.php">Clientes</a>
+                <a href="../ArchivosEncabezado/Contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1 id="tituloFlexBlox">
+        FlexBox y Grid
+    </h1>
+
+    <ol>
+        <li>
+            <div id="contenedorUno">
+                <div class="elemento">Uno</div>
+                <div class="elemento">Dos</div>
+                <div class="elemento">Tres</div>
+                <div class="elemento">Cuarto</div>
+                <div class="elemento">Cinco</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorDos">
+                <div class="elemento">Uno</div>
+                <div class="elemento">Dos</div>
+                <div class="elemento">Tres</div>
+                <div class="elemento">Cuarto</div>
+                <div class="elemento">Cinco</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorTres">
+                <div class="elemento caja1">Uno</div>
+                <div class="elemento caja2">Dos</div>
+                <div class="elemento caja3">Tres</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorCuatro">
+                <div class="elemento caja1">Uno</div>
+                <div class="elemento caja2">Dos</div>
+                <div class="elemento caja3">Tres</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorCinco">
+                <div class="elemento">Uno</div>
+                <div class="elemento">Dos</div>
+                <div class="elemento">Tres</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorSeis">
+                <div class="elemento">Uno</div>
+                <div class="elemento">Dos</div>
+                <div class="elemento">Tres</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorSiete">
+                <div class="elemento">Uno</div>
+                <div class="elemento">Dos</div>
+                <div class="elemento elementoChistoso">Un elemento de posicion absoluta que no le importan los demas elementos; 
+                    se posicionará a partir de los bordes del contenedor padre (#contenedorSiete) con los elementos de css "grid-column-start, grid-column-end, 
+                    grid-row-start & grid-row-end"
+                </div>
+                <div class="elemento">Cuarto</div>
+                <div class="elemento">Cinco</div>
+                <div class="elemento">Seis</div>
+                <div class="elemento">Siete</div>
+                <div class="elemento">Ocho</div>
+                <div class="elemento">Nueve</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorOcho">
+                <div class="elemento">Uno</div>
+                <div class="elemento">Dos</div>
+                <div class="elemento caja3">Tres/Padre
+                    <div class="elemento elementoChistoso">Un elemento de posicion absoluta dentro de uno de posicion relativa (Tres/Padre) el cual se
+                        posiciona de a cuerdo a su padre con los elementos de css "grid-column-start, grid-column-end, grid-row-start & grid-row-end"
+                        (No puede solapar contenido fuera del padre al menos que se introduzcan numeros muy exajerados como un left 999px)
+                    </div>
+                </div>
+                <div class="elemento">Cuarto</div>
+                <div class="elemento">Cinco</div>
+                <div class="elemento">Seis</div>
+                <div class="elemento">Siete</div>
+                <div class="elemento">Ocho</div>
+                <div class="elemento">Nueve</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorNueve">
+                <div class="elemento caja1">
+                    <div class="hijo">a</div>
+                    <div class="hijo">b</div>
+                    <div class="hijo">c</div>
+                </div>
+                <div class="elemento">Dos</div>
+                <div class="elemento">Tres</div>
+                <div class="elemento">Cuarto</div>
+                <div class="elemento">Cinco</div>
+            </div>
+        </li>
+        <li>
+            <div id="contenedorDiez">
+                <div class="elemento caja1">
+                    <div class="hijo">Estos son los elementos a, b & c</div>
+                    <div class="hijo">del ejemplo anterior, pero con "display: contents;"</div>
+                    <div class="hijo">en el padre para que los hijos tomen todo el espacio</div>
+                </div>
+                <div class="elemento">Dos</div>
+                <div class="elemento">Tres</div>
+                <div class="elemento">Cuarto</div>
+                <div class="elemento">Cinco</div>
+            </div>
+        </li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,55 @@
+.stories-container{
+    display: flex;
+    gap: 10px;
+    width: 700px;
+    margin: 10px auto;
+}
+
+.stories-container .story .outer-border{
+    background-color: var(--color1);
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    background: radial-gradient(circle farthest-corner at 32% 106%, 
+    var(--color1) 0%, 
+    var(--color4) 10%, 
+    var(--color3) 70%);
+}
+
+.stories-container .story .outer-border .border{
+    background-color: white;
+    border-radius: 50%;
+    width: calc(150px - 10px);
+    height: calc(150px - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.stories-container .story .outer-border .border a{
+    display: flex;
+}
+
+.stories-container .story .outer-border .border img{
+    width: calc(150px - 20px);
+    height: calc(150px - 20px);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.stories-container .story .name{
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 0;
+    font-weight: 500;
+    font-size: 16px;
+    width: 150px;
+}

@@ -1,0 +1,391 @@
+:root{
+    --color1: #333;
+    --color1T: #333333aa;
+    --color2: #fff;
+    --color2D: #d0d0d0;
+    --color3: #e1f4f3;
+    --color4: #706c61;
+    --color4D: #3d3c39;
+    --color4T: #706c61aa;
+    --tamanioBarra: 15vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    height: var(--tamanioBarra);
+    max-height: var(--tamanioBarra);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color1);
+}
+
+nav .contenedorImg{
+    height: 100%;
+}
+
+nav .contenedorImg img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+nav .presentacion{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    color: var(--color2);
+}
+
+nav .presentacion p{
+    margin: 0;    
+}
+
+nav .presentacion .nombre{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+nav .presentacion .profesion{
+    font-weight: light;
+}
+
+nav .navegacion{
+    height: 100%;
+}
+
+nav .navegacion svg{
+    height: 100%;
+    cursor: pointer;
+    fill: var(--color2);
+}
+
+nav .navegacion .navegacionOculta{
+    position: absolute;
+    top: calc(var(--tamanioBarra) * -1);
+    left: 0;
+    width: 100%;
+    height: var(--tamanioBarra);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    transition: top .3s ease-in-out;
+}
+
+nav .navegacion svg:hover ~ .navegacionOculta{
+    top: 0;
+}
+
+nav .navegacion .navegacionOculta:hover{
+    top: 0;
+}
+
+nav .navegacion .navegacionOculta > a{
+    flex: auto;
+    align-content: center;
+}
+
+nav .navegacion .navegacionOculta a{
+    font-size: x-large;
+    height: 100%;
+    color: var(--color1); 
+    background-color: var(--color2); 
+}
+
+nav .navegacion .navegacionOculta a:hover{
+    color: var(--color3); 
+    background-color: var(--color4); 
+}
+
+/* Hasta aqui la barra de navegacion */
+
+#tituloProyectos{
+    text-align: center;
+}
+
+.proyecto{
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--color4T);
+    color: var(--color1);
+    padding-bottom: 10px;
+    border: 1px solid var(--color1);
+}
+
+.proyecto:nth-child(odd){
+    background-color: var(--color2T);
+}
+
+.proyecto .descripcionProyecto{
+    font-size: large;
+}
+
+.contenedorProyecto.especial{
+    width: 100vw;
+    height: 100vh;
+}
+
+/*Hasta aqui el CSS del contenedor*/
+
+.contenedorTemperaturas{
+    background-color: var(--color1);
+    width: 40vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contenedorTemperaturas div{
+    padding: 2.5% 0;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorTemperaturas div input{
+    outline: transparent;
+    padding: 3px;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 1% 0;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.contenedorTemperaturas div #inputTemp{
+    background-color: var(--color4);
+    color: var(--color2);
+    border: 2px solid var(--color4D);
+}
+
+.contenedorTemperaturas div #outputTemp{
+    background-color: var(--color4D);
+    color: var(--color2);
+    border: 0;
+}
+
+.contenedorTemperaturas button{
+    margin-bottom: 2.5%;
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+/*Hasta aqui el CSS del convertidor de temperaturas*/
+
+.contenedorIMC{
+    background-color: var(--color1);
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.contenedorIMC div{
+    padding: 2.5% 0;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorIMC .consejoMillonario{
+    padding: 0 0 2.5% 0;
+    width: 100%;
+    color: var(--color3);
+    text-align: center;
+}
+
+.contenedorIMC .consejoMillonario p{
+    margin: 0;
+}
+
+.contenedorIMC .salidaIMC{
+    width: 80%;
+    margin: 0 10%;
+}
+
+.contenedorIMC div label{
+    color: var(--color2);
+}
+
+.contenedorIMC div input{
+    outline: transparent;
+    padding: 3px;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 1% 0;
+    text-align: center;
+}
+
+.contenedorIMC div .entradaInputIMC{
+    background-color: var(--color4);
+    color: var(--color2);
+    border: 2px solid var(--color4D);
+}
+
+.contenedorIMC div #outputIMC{
+    background-color: var(--color4);
+    color: var(--color2);
+    border: 0;
+}
+
+.contenedorIMC button{
+    margin-bottom: 2.5%;
+    background-color: var(--color2);
+    color: var(--color1);
+}
+
+/*Hasta aqui el CSS de la calculadora del IMC*/
+
+
+.encabezado {
+width: 100%;
+text-align: center;
+margin: 3rem auto 0;
+}
+
+.header-1 {
+font-size: 3.5rem;
+}
+
+.contenedorRecipientes{
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    padding-bottom: 3rem; 
+}
+
+.head-2 {
+    font-size: 2.75rem;
+}
+
+.var-entradas {
+    margin: auto;
+    width: 100%;
+    background-color: var(--color4);
+    padding: 1.5rem 2.75rem;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    color: var(--color2C);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+    padding: 0.75rem 1.75rem;
+}
+
+label {
+    color: var(--color2C);
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+.input-data {
+    width: 100%;
+    height: 2.25rem;
+    font-size: 1.75rem;
+}
+
+.input-data:focus {
+    outline: 1px solid var(--color1);
+}
+
+.datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*    grid-template-rows: auto auto; */
+    gap: 0.75rem;
+    column-gap: 3.5rem;
+}
+
+.boton-alinear{    
+    width: 80rem;
+    margin: 3rem auto;
+    text-align: right;  
+}
+
+.boton {
+    background-color: var(--color3);
+    color: var(--color4);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.25rem 5.75rem;
+    font-size: 1.25rem; 
+}
+
+.boton:hover{
+    background-color: var(--color2D); 
+    cursor: pointer;    
+}
+
+.alinear-izquierda {
+    text-align: left;
+}
+
+/*Hasta aqui el CSS de recipientes*/
+
+#contenedorOpciones{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contenedorOpciones div{
+    width: 20%;
+    text-align: center;
+}
+
+#contenedorOpciones div input{
+    width: 5%;
+}
+
+#contenedorOpciones div button{
+    width: 80%;
+    margin: 10px auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+#contenedorGrafica{
+    width: 100%;
+    height: 80%;
+}
+
+/*Hasta aqui el CSS de la graficadora*/

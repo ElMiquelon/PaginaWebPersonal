@@ -1,0 +1,112 @@
+.contenedorProyecto #contenedorMenu{
+    background-color: var(--color1);
+    color: var(--color2);
+    width: 100%;
+}
+
+.contenedorProyecto #contenedorMenu .mobile{
+    display: none;
+}
+
+.contenedorProyecto #contenedorMenu .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.contenedorProyecto #contenedorMenu .mobile .header .more button{
+    border: none;
+    background-color: var(--color1);
+    color: var(--color2);
+    padding: 15px;
+    cursor: pointer;
+}
+
+.contenedorProyecto #contenedorMenu .logo{
+    max-width: 250px;
+    max-height: 58px;
+}
+
+.contenedorProyecto #contenedorMenu a{
+    color: var(--color2);
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+}
+
+.contenedorProyecto #contenedorMenu a:hover{
+    color:var(--color1);
+    background-color: var(--color3);
+}
+
+.contenedorProyecto #contenedorMenu .desktop{
+    display: flex;
+    justify-content:space-between;
+    padding: 0px 20px;
+    align-items: center;
+}
+
+
+.contenedorProyecto #contenedorMenu .desktop .secondaryFull .busqueda:hover .abrirBusqueda ~ .barraBusqueda{
+    display: flex;
+}
+
+.contenedorProyecto #contenedorMenu .desktop .primary,
+.contenedorProyecto #contenedorMenu .desktop .secondaryFull{
+    display: flex;
+}
+
+.contenedorProyecto #contenedorMenu .desktop .secondaryMini{
+    display: none;
+}
+
+@media screen and (max-width:924px){
+    .contenedorProyecto #contenedorMenu .logo{
+        max-width: 100px;
+    }
+
+    .contenedorProyecto #contenedorMenu .desktop .secondaryFull{
+        display: none;
+    }
+    
+    .contenedorProyecto #contenedorMenu .desktop .secondaryMini{
+        display: block !important;
+    }
+
+    .contenedorProyecto #contenedorMenu .desktop .secondaryMini .submenu{
+        background-color: var(--color3);
+        position: absolute;
+        display: none;
+        width: 150px;
+        right: 0;
+    }
+
+    .contenedorProyecto #contenedorMenu .desktop .secondaryMini:hover .more ~ .submenu{
+        display: block;
+    }
+
+    .contenedorProyecto #contenedorMenu .desktop .secondaryMini .busqueda:hover .abrirBusqueda ~ .barraBusqueda{
+        display: block;
+    }
+
+    .contenedorProyecto #contenedorMenu .textoBusqueda{
+        margin: 5px 0;
+    }
+    
+    .contenedorProyecto #contenedorMenu .botonBusqueda{
+        padding: 5px 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+
+    .contenedorProyecto #contenedorMenu .desktop{
+        display: none;
+    }
+
+    .contenedorProyecto #contenedorMenu .mobile{
+        display: block;
+    }
+    
+}

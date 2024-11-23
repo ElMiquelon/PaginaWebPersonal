@@ -1,0 +1,51 @@
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 24
+}
+
+.search-bar{
+    border: solid 1px var(--color4);
+    border-radius: 30px;
+    width: 64vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 10px;
+    margin: 20px auto;
+}
+
+.search-bar:focus-within{
+    border: solid 1px var(--color3);
+    box-shadow: 0 2px 5px var(--color4);
+}
+
+.search-bar input[type = "text"]{
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+    font-size: 18px;
+    color: var(--color1);
+}
+
+.search-bar .actions{
+    display: flex;
+    gap: 5px;
+}
+
+.search-bar .actions button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: var(--color1);
+    transition: color .3s ease-in-out;
+}
+
+.search-bar .actions button:hover{
+    color: var(--color4);
+}
+

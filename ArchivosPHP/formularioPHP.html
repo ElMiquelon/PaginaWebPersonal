@@ -1,0 +1,77 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/pic.jpg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <title>Mini Formulario PHP</title>
+</head>
+<body>
+    <nav>
+        <div class="contenedorImg">
+            <img src="./img/pic.jpg" alt="fotoYo">
+        </div>
+        <div class="presentacion">
+            <p class="nombre">Miguel Angel Rojas Helguera</p>
+            <p class="profesion">Estudiante ICOM</p>
+        </div>
+        <div class="navegacion">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M125-244v-57.5h710v57.5H125Zm0-207.5V-509h710v57.5H125Zm0-207.5v-57.5h710v57.5H125Z"/></svg>
+            <div class="navegacionOculta">
+                <a href="../index.html">Inicio</a>
+                <a href="../ArchivosEncabezado/AcercaDe.html">Acerca de Mí</a>
+                <a href="../ArchivosEncabezado/Clientes.php">Clientes</a>
+                <a href="../ArchivosEncabezado/Contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <header class="header">
+            <h1 class="header-1">Base de datos Materiales</h1>
+            <div class="imagen">
+                <img src="./img/db.png" alt="db">
+            </div>        
+        </header>
+         
+        <form action="registrar.php" method="post">
+            <fieldset>
+                <div class="pad-legend">
+                    <legend>Base de datos aluminios:</legend>
+                </div>
+                
+                <div class="campos">
+                    <div>
+                        <label class="etiqueta" for="">Material:</label>   
+                        <input class="input-text" placeholder="Material" type="text" name="material" id="material" >
+                    </div>
+                    <div>
+                        <label class="etiqueta" for="">Ftu (ksi):</label>   
+                        <input class="input-text" placeholder="Ftu (ksi)" type="number" name="ftu" id="ftu">
+                    </div>
+                    <div>
+                        <label class="etiqueta" for="">Fcu (ksi):</label>   
+                        <input class="input-text" placeholder="Fcu (ksi)" type="number" name="fcu" id="fcu">
+                    </div>
+                    <div>
+                        <label class="etiqueta" for="">Fyu (ksi):</label>   
+                        <input class="input-text" placeholder="Fyu (ksi)" type="number" name="fyu" id="fyu">
+                    </div>
+                    <div>
+                        <label class="etiqueta" for="">E (Msi):</label>   
+                        <input class="input-text" placeholder="E (Msi)" type="number" name="E" id="E">
+                    </div>
+                </div>
+            </fieldset>
+            <div class="boton-margin">
+                <a style="text-decoration: none; margin-right: 2.5px;" class="boton" href="./tblMateriales.php">Ir a tabla de materiales</a>
+                <input class="boton" type="submit" value="Enviar">
+                
+            </div>
+            
+        </form>
+    </div>
+
+</body>
+</html>

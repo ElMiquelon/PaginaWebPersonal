@@ -1,0 +1,34 @@
+
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 800px;
+    margin: 100px auto;
+}
+
+td, th{
+    border: solid 1px var(--color2);
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: var(--color3);
+}
+
+td:nth-child(n+3),
+tH:nth-child(n+3){
+    text-align: center;
+}
+
+tbody tr:hover{
+    background-color: var(--color4) !important;
+    color: var(--color2) !important;
+}
+
+thead{
+    background-color: var(--color1);
+    color: var(--color2);
+    position: sticky;
+    top: 0;
+}
+

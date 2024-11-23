@@ -1,0 +1,36 @@
+.contenedor-Carrusel{
+    width: 25vw;
+    align-self: stretch;
+    padding: 0 2.5vw;
+    margin: 10px auto;
+}
+
+.contenedor-Carrusel .carrusel{
+    width: 25vw;
+    display: flex;
+    /* Magia del slider */
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.contenedor-Carrusel .carrusel::-webkit-scrollbar{
+    display: none;
+}
+
+.contenedor-Carrusel .carrusel img{ 
+    max-width: 25vw;
+    animation: animacionCarrusel 15s linear infinite;
+}
+
+@keyframes animacionCarrusel {
+    from{
+        transform: translateX(0%);
+    }to{
+        transform: translateX(-900%);
+    }
+} 
+
+/* Hasta aqui el css de nosotros */

@@ -1,0 +1,63 @@
+.cards{
+    display: flex;
+    width: 100%;
+    
+}
+
+.cards .card{
+    background: var(--color1);
+    color: var(--color2);
+    width: 300px;
+    height: 350px;
+    border-radius: 20%;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, .2);
+}
+
+.cards .card a{
+    color:var(--color2);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cards .card a:hover{
+    color:var(--color3); 
+}
+
+.cards .card .header{
+    flex: 1;
+}
+
+.cards .card:hover {
+    margin-right: 120px;
+    transform: translateY(-15px);
+}
+
+.cards .card .header .date{
+    padding: 10px 0;
+}
+
+.cards .card .header .title{
+    padding: 0px 0;
+    font-size: 28px;
+}
+
+.cards .card[class*="ext"]{
+    margin-left: -150px;
+}
+
+.cards .card .footer .autor a{ 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cards .card .footer img{
+    width: 30px;
+    border-radius: 100%;
+}

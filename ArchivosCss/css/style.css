@@ -1,0 +1,290 @@
+:root{
+    --color1: #333;
+    --color1T: #333333aa;
+    --color2: #fff;
+    --color2T: #ffffffaa;
+    --color3: #e1f4f3;
+    --color3T: #e1f4f3aa;
+    --color4: #706c61;
+    --color4T: #706c61aa;
+    --tamanioBarra: 15vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    height: var(--tamanioBarra);
+    max-height: var(--tamanioBarra);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color1);
+}
+
+nav .contenedorImg{
+    height: 100%;
+}
+
+nav .contenedorImg img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+nav .presentacion{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    color: var(--color2);
+}
+
+nav .presentacion p{
+    margin: 0;    
+}
+
+nav .presentacion .nombre{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+nav .presentacion .profesion{
+    font-weight: light;
+}
+
+nav .navegacion{
+    height: 100%;
+}
+
+nav .navegacion svg{
+    height: 100%;
+    cursor: pointer;
+    fill: var(--color2);
+}
+
+nav .navegacion .navegacionOculta{
+    position: absolute;
+    top: calc(var(--tamanioBarra) * -1);
+    left: 0;
+    width: 100%;
+    height: var(--tamanioBarra);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    transition: top .3s ease-in-out;
+}
+
+nav .navegacion svg:hover ~ .navegacionOculta{
+    top: 0;
+}
+
+nav .navegacion .navegacionOculta:hover{
+    top: 0;
+}
+
+nav .navegacion .navegacionOculta > a{
+    flex: auto;
+    align-content: center;
+}
+
+nav .navegacion .navegacionOculta a{
+    font-size: x-large;
+    height: 100%;
+    color: var(--color1); 
+    background-color: var(--color2); 
+}
+
+nav .navegacion .navegacionOculta a:hover{
+    color: var(--color3); 
+    background-color: var(--color4); 
+}
+
+/* Hasta aqui la barra de navegacion */
+
+#tituloFlexBlox{
+    text-align: center;
+    color: var(--color4);
+}
+
+li{
+    padding: 10px;
+}
+
+li div{
+    border: 2px solid var(--color4);
+    background-color: var(--color5);
+
+}
+
+.elemento{
+    background-color: var(--color1);
+    color: var(--color2);
+    border: 1px solid var(--color2);
+}
+
+#contenedorUno{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contenedorUno > div {
+    flex: 1 1 150px;
+}
+
+#contenedorDos{
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#contenedorTres{
+    display: flex;
+    align-items: flex-end;
+    min-height: 200px;
+}
+
+#contenedorTres .caja1{
+    align-self: stretch;
+}
+
+#contenedorTres .caja2{
+    align-self: flex-start;
+}
+
+#contenedorCuatro{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: end;
+    grid-auto-rows: 200px;
+}
+
+#contenedorCuatro .caja1{
+    align-self: stretch;
+}
+
+#contenedorCuatro .caja2{
+    align-self: start;
+}
+
+#contenedorCinco {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+}
+
+#contenedorSeis{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+#contenedorSiete{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    gap: 10px;
+    position: relative;
+}
+
+#contenedorSiete .elementoChistoso{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+#contenedorOcho{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 10px;
+}
+
+#contenedorOcho .caja3{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+}
+
+#contenedorOcho .caja3 .elementoChistoso{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: var(--color3);
+    border: 2px solid var(--color2);
+    color: var(--color1);
+    padding: 10px;
+}
+
+#contenedorNueve{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#contenedorNueve .caja1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#contenedorDiez{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#contenedorDiez .caja1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: contents;
+    text-align: center;
+}
+
+#contenedorDiez .caja1 .hijo{ 
+    color: var(--color1);
+}
+
+/*Hasta aqui el CSS del Flexbox*/
+#tituloProyectos{
+    text-align: center;
+}
+
+.proyecto{
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--color4T);
+    color: var(--color1);
+    padding-bottom: 10px;
+    border: 1px solid var(--color1);
+}
+
+.proyecto:nth-child(odd){
+    background-color: var(--color2T);
+}
+
+.proyecto .descripcionProyecto{
+    font-size: large;
+}
+
+.contenedorProyecto.especial{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*Hasta aqui el CSS de la demostracion de proyectos (general)*/
